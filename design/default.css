@@ -1,0 +1,229 @@
+/* a[title="Accueil"], p a {
+    color: red;
+} */
+/* selectionner plusieurs liens dont l'attribut title contient presque le même contenu */
+/* a[title*="Accueil"]{
+    color: red;
+} */
+/* Les polices */
+/* html{
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* h2{
+    font-family: 'Open Sans', sans-serif;
+}
+p, a, h3{
+    font-family: 'roboto', sans-serif;
+} */
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #f4f7f6;
+    margin: 0px;
+    line-height: 1.5em;
+    /* border: 1px pink dashed; */
+} 
+header{
+    text-align: center;
+    background: #1D1D1D;
+    color: white;
+    padding-bottom: 30px;
+}
+section{
+    text-align: center;
+    margin-top: 50px;
+}
+section p{
+    text-align: center;
+}
+
+h1{
+    font-family: 'theblacklist', arial, sans-serif;
+    margin-top: 0%;
+    padding-top: 30px;
+    /* border-bottom: 1px solid black; */
+    /* opacity: 0.5; */
+    /* text-shadow: 3px 3px 3px silver; */
+}
+h1:hover {
+    color: #999999;
+}
+header h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    width: 400px;
+    margin: auto;
+    /* word-wrap: break-word; Permet au texte de respecter la largeur du contenant */
+    /* overflow: auto;
+    height: 20px; permet de cacher et de faire apparaître du texte :hidden, auto, scroll*/
+    /* border: 1px solid; */
+    /* border-radius: 10px 20px 12px 25px; */
+    /* border-radius: 10px / 30px; */
+    /* box-shadow: Decalage horizontal / decalage vers le bas / adoucissement / couleur; */
+    /* box-shadow: 5px 10px 30px black;*/
+    /* overflow: hidden; permet de cacher ce qui dépasse la hauteur définie*/
+}
+/* avant h3 */
+h3:before {
+    content: "« ";
+    color: grey;
+}
+h3{
+    font-size: 1.5em;
+    text-transform: uppercase;
+
+}
+/* après h3 */
+h3:after {
+    content: " »";
+    color: grey;
+}
+p{
+    text-align: justify;
+    text-decoration: none;
+    font-weight: normal;
+}
+/* Personnaliser les polices */
+@font-face {
+    font-family: 'theblacklist';
+    src: url('../src/theblacklist.ttf') format('truetype');
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li:hover {
+    font-weight: bold;
+}
+ul{
+    padding: 0%;
+    /* effacer la marge avec display */
+    display: inline;
+}
+li  {
+    list-style-type : none;
+    display: inline;
+    margin: 10px;
+}
+/* Si on veut que contact se mette en block */
+/* a[title="Contact"]{
+    display: block;
+} */
+nav{
+    text-align: center;
+    background: white;
+    box-shadow: 0px 3px 1px -1px rgba(0, 0, 0, 0.5);
+    font-size: 1.1em;
+    padding: 15px;
+    /* Positionnement left:0 right:Opx pour que ça prenne toute la largeur et centré au milieu */
+    /* position: fixed;
+    left: 0px;
+    right: 0px; */
+}
+footer{
+    background: #1d1d1d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+footer p {
+    text-align: center;
+}
+/* button */
+.button{
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in 0s;
+}
+.button:hover{
+    background-color: #1D1D1D;
+    color: #fff;
+    text-decoration: none ;
+}
+/* id et classes */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+#logo{
+    margin-top: 30px;
+    width: 50px;
+}
+#contact {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+#projets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.separator {
+    width: 40px;
+    height: 1px;
+    margin: 15px auto;
+    display: block;
+    background: #999999;
+}
+.projet {
+    width: 400px;
+    margin: 30px;
+    display: inline-block;
+    background: white;
+    padding-bottom: 15px;
+    border: 0px black solid;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.projet:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: 0.3s;
+}
+.projet img {
+    width: 400px;
+    height: 266px;
+}
+.picture {
+    width: 400px;
+    height: 266px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.projet span {
+    text-transform: uppercase;
+    display: block;
+}
+.projet .date-project {
+    font-size: 0.7em;
+}
+#contact a {
+    font-weight: bold;
+}
+/* id= section image vidéo project.html */
+.picture-project img, .picture-project video {
+    width: 80%;
+}
+/* Rendre le site responsive: media */
+@media screen and (max-width:1000px){
+    #projets {justify-content: center; width: 100%;}
+    /* body{background: red;} */
+    .project {width: 100%; margin: 15px auto;}
+    .project img {width: 100%; min-width: auto; height: auto;}
+    .projet .picture {width: 100%; height: auto;}
+    header h2 {width: 90%;}
+     
+}
